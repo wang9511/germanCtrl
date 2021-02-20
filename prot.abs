@@ -1,0 +1,178 @@
+
+
+n_SendReqS:
+[i], NoAbstractRule
+
+n_SendReqEI:
+[i], NoAbstractRule
+
+n_SendReqES:
+[i], NoAbstractRule
+
+n_RecvReq:
+[i],n_ABS_RecvReq_NODE_1,
+[rule_77,rule_89,rule_95],[]
+
+
+ruleset j : NODE do
+Invariant "rule_77"
+	(CurCmd = Empty -> Chan3[j].Cmd = Empty);
+endruleset;
+
+
+
+ruleset j : NODE do
+Invariant "rule_89"
+	(CurCmd = Empty -> Chan3[j].Cmd != InvAck);
+endruleset;
+
+
+
+ruleset j : NODE do
+Invariant "rule_95"
+	(CurCmd = Empty -> Chan2[j].Cmd != Inv);
+endruleset;
+
+
+n_SendInvE:
+[i], NoAbstractRule
+
+n_SendInvS:
+[i], NoAbstractRule
+
+n_SendInvAck:
+[i], NoAbstractRule
+
+n_RecvInvAck1:
+[i],n_ABS_RecvInvAck1_NODE_1,
+[],[]
+
+n_RecvInvAck2:
+[i], NoAbstractRule
+
+n_SendGntS:
+[i],n_ABS_SendGntS_NODE_1,
+[],[]
+
+n_SendGntE:
+[i],n_ABS_SendGntE_NODE_1,
+[rule_65,rule_100,rule_70,rule_46,rule_54,rule_57,rule_58,rule_90,rule_94,rule_31],[]
+
+
+ruleset j : NODE do
+Invariant "rule_65"
+	(ShrSet[j] = false -> Cache[j].State = I);
+endruleset;
+
+
+
+ruleset j : NODE do
+Invariant "rule_100"
+	(ShrSet[j] = false -> InvSet[j] = false);
+endruleset;
+
+
+
+ruleset j : NODE do
+Invariant "rule_70"
+	(ShrSet[j] = false -> Cache[j].State != E);
+endruleset;
+
+
+
+ruleset j : NODE do
+Invariant "rule_46"
+	(ShrSet[j] = false -> Chan2[j].Cmd != GntE);
+endruleset;
+
+
+
+ruleset j : NODE do
+Invariant "rule_54"
+	(ShrSet[j] = false -> Chan2[j].Cmd != Inv);
+endruleset;
+
+
+
+ruleset j : NODE do
+Invariant "rule_57"
+	(ShrSet[j] = false -> Chan3[j].Cmd != InvAck);
+endruleset;
+
+
+
+ruleset j : NODE do
+Invariant "rule_58"
+	(ShrSet[j] = false -> Cache[j].State != S);
+endruleset;
+
+
+
+ruleset j : NODE do
+Invariant "rule_90"
+	(ShrSet[j] = false -> Chan2[j].Cmd != GntS);
+endruleset;
+
+
+
+ruleset j : NODE do
+Invariant "rule_94"
+	(ShrSet[j] = false -> Chan2[j].Cmd = Empty);
+endruleset;
+
+
+
+ruleset j : NODE do
+Invariant "rule_31"
+	(ShrSet[j] = false -> Chan3[j].Cmd = Empty);
+endruleset;
+
+
+n_RecvGntS:
+[i], NoAbstractRule
+
+n_RecvGntE:
+[i], NoAbstractRule
+
+n_SendReqS:
+[i], NoAbstractRule
+
+n_SendReqEI:
+[i], NoAbstractRule
+
+n_SendReqES:
+[i], NoAbstractRule
+
+n_RecvReq:
+[i],n_ABS_RecvReq_NODE_1,
+[],[]
+
+n_SendInvE:
+[i], NoAbstractRule
+
+n_SendInvS:
+[i], NoAbstractRule
+
+n_SendInvAck:
+[i], NoAbstractRule
+
+n_RecvInvAck1:
+[i],n_ABS_RecvInvAck1_NODE_1,
+[],[]
+
+n_RecvInvAck2:
+[i], NoAbstractRule
+
+n_SendGntS:
+[i],n_ABS_SendGntS_NODE_1,
+[],[]
+
+n_SendGntE:
+[i],n_ABS_SendGntE_NODE_1,
+[],[]
+
+n_RecvGntS:
+[i], NoAbstractRule
+
+n_RecvGntE:
+[i], NoAbstractRule

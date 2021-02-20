@@ -1,0 +1,19 @@
+-- Auxiliary invariants used by RecvGntS:
+Chan2[NODE_1].Cmd = GntS -> Cache[NODE_2].State != E
+Chan2[NODE_1].Cmd = GntS -> Chan2[NODE_2].Cmd != GntE
+Chan2[NODE_1].Cmd = GntS -> ExGntd = false
+
+-- Auxiliary invariants used by RecvGntE:
+Chan2[NODE_1].Cmd = GntE -> Cache[NODE_2].State = I
+Chan2[NODE_1].Cmd = GntE -> Chan2[NODE_2].Cmd != GntE
+Chan2[NODE_1].Cmd = GntE -> Cache[NODE_2].State != S
+Chan2[NODE_1].Cmd = GntE -> ExGntd = true
+Chan2[NODE_1].Cmd = GntE -> Chan3[NODE_2].Cmd = Empty
+Chan2[NODE_1].Cmd = GntE -> Cache[NODE_2].State != E
+Chan2[NODE_1].Cmd = GntE -> Chan3[NODE_2].Cmd != InvAck
+Chan2[NODE_1].Cmd = GntE -> Chan2[NODE_2].Cmd = Empty
+Chan2[NODE_1].Cmd = GntE -> Chan2[NODE_2].Cmd != Inv
+Chan2[NODE_1].Cmd = GntE -> InvSet[NODE_2] = false
+Chan2[NODE_1].Cmd = GntE -> ShrSet[NODE_2] = false
+Chan2[NODE_1].Cmd = GntE -> Chan2[NODE_2].Cmd != GntS
+

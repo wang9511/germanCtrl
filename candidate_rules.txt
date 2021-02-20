@@ -1,0 +1,15 @@
+rule_1: Chan2[NODE_1].Cmd = GntE -> ExGntd = true
+rule_2: Chan2[NODE_1].Cmd = GntS -> ExGntd = false
+rule_3: Chan2[NODE_1].Cmd = GntE -> InvSet[NODE_2] = false
+rule_4: Chan2[NODE_1].Cmd = GntE -> ShrSet[NODE_2] = false
+rule_5: Chan2[NODE_1].Cmd = GntE -> Cache[NODE_2].State = I
+rule_6: Chan2[NODE_1].Cmd = GntS -> Cache[NODE_2].State != E
+rule_7: Chan2[NODE_1].Cmd = GntE -> Cache[NODE_2].State != S
+rule_8: Chan2[NODE_1].Cmd = GntE -> Cache[NODE_2].State != E
+rule_9: Chan2[NODE_1].Cmd = GntE -> Chan2[NODE_2].Cmd != Inv
+rule_10: Chan2[NODE_1].Cmd = GntE -> Chan2[NODE_2].Cmd != GntE
+rule_11: Chan2[NODE_1].Cmd = GntS -> Chan2[NODE_2].Cmd != GntE
+rule_12: Chan2[NODE_1].Cmd = GntE -> Chan3[NODE_2].Cmd = Empty
+rule_13: Chan2[NODE_1].Cmd = GntE -> Chan2[NODE_2].Cmd = Empty
+rule_14: Chan2[NODE_1].Cmd = GntE -> Chan2[NODE_2].Cmd != GntS
+rule_15: Chan2[NODE_1].Cmd = GntE -> Chan3[NODE_2].Cmd != InvAck

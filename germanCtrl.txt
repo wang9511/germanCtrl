@@ -1,0 +1,426 @@
+This program should be regarded as a DEBUGGING aid, not as a 
+certifier of correctness.
+Call with the -l flag or read the license file for terms
+and conditions of use.
+Run this program with "-h" for the list of options.
+
+Bugs, questions, and comments should be directed to
+"melatti@di.uniroma1.it".
+
+CMurphi compiler last modified date: Nov  7 2020
+Include files last modified date:    Nov 8 2016
+==========================================================================
+
+==========================================================================
+Caching Murphi Release 5.4.9.1
+Finite-state Concurrent System Verifier.
+
+Caching Murphi Release 5.4.9.1 is based on various versions of Murphi.
+Caching Murphi Release 5.4.9.1 :
+Copyright (C) 2009-2012 by Sapienza University of Rome.
+Murphi release 3.1 :
+Copyright (C) 1992 - 1999 by the Board of Trustees of
+Leland Stanford Junior University.
+
+==========================================================================
+
+Protocol: ./protocols/germanCtrl/germanCtrl
+
+Algorithm:
+	Verification by breadth first search.
+	with symmetry algorithm 3 -- Heuristic Small Memory Normalization
+	with permutation trial limit 10.
+
+Memory usage:
+
+	* The size of each state is 120 bits (rounded up to 16 bytes).
+	* The memory allocated for the hash table and state queue is
+	  1048 Mbytes.
+	  With two words of overhead per state, the maximum size of
+	  the state space is 42281293 states.
+	   * Use option "-k" or "-m" to increase this, if necessary.
+	* Capacity in queue for breadth-first search: 4228129 states.
+	   * Change the constant gPercentActiveStates in mu_prolog.inc
+	     to increase this, if necessary.
+State 1:
+Cache[NODE_1].State:I
+Cache[NODE_2].State:I
+Chan1[NODE_1].Cmd:Empty
+Chan1[NODE_2].Cmd:Empty
+Chan2[NODE_1].Cmd:Empty
+Chan2[NODE_2].Cmd:Empty
+Chan3[NODE_1].Cmd:Empty
+Chan3[NODE_2].Cmd:Empty
+ShrSet[NODE_1]:false
+ShrSet[NODE_2]:false
+InvSet[NODE_1]:false
+InvSet[NODE_2]:false
+ExGntd:false
+CurCmd:Empty
+CurPtr:Undefined
+
+State 2:
+Cache[NODE_1].State:I
+Cache[NODE_2].State:I
+Chan1[NODE_1].Cmd:Empty
+Chan1[NODE_2].Cmd:ReqE
+Chan2[NODE_1].Cmd:Empty
+Chan2[NODE_2].Cmd:Empty
+Chan3[NODE_1].Cmd:Empty
+Chan3[NODE_2].Cmd:Empty
+ShrSet[NODE_1]:false
+ShrSet[NODE_2]:false
+InvSet[NODE_1]:false
+InvSet[NODE_2]:false
+ExGntd:false
+CurCmd:Empty
+CurPtr:Undefined
+
+State 3:
+Cache[NODE_1].State:I
+Cache[NODE_2].State:I
+Chan1[NODE_1].Cmd:Empty
+Chan1[NODE_2].Cmd:ReqS
+Chan2[NODE_1].Cmd:Empty
+Chan2[NODE_2].Cmd:Empty
+Chan3[NODE_1].Cmd:Empty
+Chan3[NODE_2].Cmd:Empty
+ShrSet[NODE_1]:false
+ShrSet[NODE_2]:false
+InvSet[NODE_1]:false
+InvSet[NODE_2]:false
+ExGntd:false
+CurCmd:Empty
+CurPtr:Undefined
+
+State 4:
+Cache[NODE_1].State:I
+Cache[NODE_2].State:I
+Chan1[NODE_1].Cmd:Empty
+Chan1[NODE_2].Cmd:Empty
+Chan2[NODE_1].Cmd:Empty
+Chan2[NODE_2].Cmd:Empty
+Chan3[NODE_1].Cmd:Empty
+Chan3[NODE_2].Cmd:Empty
+ShrSet[NODE_1]:false
+ShrSet[NODE_2]:false
+InvSet[NODE_1]:false
+InvSet[NODE_2]:false
+ExGntd:false
+CurCmd:ReqE
+CurPtr:NODE_1
+
+State 5:
+Cache[NODE_1].State:I
+Cache[NODE_2].State:I
+Chan1[NODE_1].Cmd:ReqE
+Chan1[NODE_2].Cmd:ReqE
+Chan2[NODE_1].Cmd:Empty
+Chan2[NODE_2].Cmd:Empty
+Chan3[NODE_1].Cmd:Empty
+Chan3[NODE_2].Cmd:Empty
+ShrSet[NODE_1]:false
+ShrSet[NODE_2]:false
+InvSet[NODE_1]:false
+InvSet[NODE_2]:false
+ExGntd:false
+CurCmd:Empty
+CurPtr:Undefined
+
+State 6:
+Cache[NODE_1].State:I
+Cache[NODE_2].State:I
+Chan1[NODE_1].Cmd:ReqS
+Chan1[NODE_2].Cmd:ReqE
+Chan2[NODE_1].Cmd:Empty
+Chan2[NODE_2].Cmd:Empty
+Chan3[NODE_1].Cmd:Empty
+Chan3[NODE_2].Cmd:Empty
+ShrSet[NODE_1]:false
+ShrSet[NODE_2]:false
+InvSet[NODE_1]:false
+InvSet[NODE_2]:false
+ExGntd:false
+CurCmd:Empty
+CurPtr:Undefined
+
+State 7:
+Cache[NODE_1].State:I
+Cache[NODE_2].State:I
+Chan1[NODE_1].Cmd:Empty
+Chan1[NODE_2].Cmd:Empty
+Chan2[NODE_1].Cmd:Empty
+Chan2[NODE_2].Cmd:Empty
+Chan3[NODE_1].Cmd:Empty
+Chan3[NODE_2].Cmd:Empty
+ShrSet[NODE_1]:false
+ShrSet[NODE_2]:false
+InvSet[NODE_1]:false
+InvSet[NODE_2]:false
+ExGntd:false
+CurCmd:ReqS
+CurPtr:NODE_1
+
+State 8:
+Cache[NODE_1].State:I
+Cache[NODE_2].State:I
+Chan1[NODE_1].Cmd:ReqS
+Chan1[NODE_2].Cmd:ReqS
+Chan2[NODE_1].Cmd:Empty
+Chan2[NODE_2].Cmd:Empty
+Chan3[NODE_1].Cmd:Empty
+Chan3[NODE_2].Cmd:Empty
+ShrSet[NODE_1]:false
+ShrSet[NODE_2]:false
+InvSet[NODE_1]:false
+InvSet[NODE_2]:false
+ExGntd:false
+CurCmd:Empty
+CurPtr:Undefined
+
+State 9:
+Cache[NODE_1].State:I
+Cache[NODE_2].State:I
+Chan1[NODE_1].Cmd:Empty
+Chan1[NODE_2].Cmd:Empty
+Chan2[NODE_1].Cmd:GntE
+Chan2[NODE_2].Cmd:Empty
+Chan3[NODE_1].Cmd:Empty
+Chan3[NODE_2].Cmd:Empty
+ShrSet[NODE_1]:true
+ShrSet[NODE_2]:false
+InvSet[NODE_1]:false
+InvSet[NODE_2]:false
+ExGntd:true
+CurCmd:Empty
+CurPtr:NODE_1
+
+State 10:
+Cache[NODE_1].State:I
+Cache[NODE_2].State:I
+Chan1[NODE_1].Cmd:ReqE
+Chan1[NODE_2].Cmd:Empty
+Chan2[NODE_1].Cmd:Empty
+Chan2[NODE_2].Cmd:Empty
+Chan3[NODE_1].Cmd:Empty
+Chan3[NODE_2].Cmd:Empty
+ShrSet[NODE_1]:false
+ShrSet[NODE_2]:false
+InvSet[NODE_1]:false
+InvSet[NODE_2]:false
+ExGntd:false
+CurCmd:ReqE
+CurPtr:NODE_1
+
+State 11:
+Cache[NODE_1].State:I
+Cache[NODE_2].State:I
+Chan1[NODE_1].Cmd:Empty
+Chan1[NODE_2].Cmd:ReqE
+Chan2[NODE_1].Cmd:Empty
+Chan2[NODE_2].Cmd:Empty
+Chan3[NODE_1].Cmd:Empty
+Chan3[NODE_2].Cmd:Empty
+ShrSet[NODE_1]:false
+ShrSet[NODE_2]:false
+InvSet[NODE_1]:false
+InvSet[NODE_2]:false
+ExGntd:false
+CurCmd:ReqE
+CurPtr:NODE_1
+
+State 12:
+Cache[NODE_1].State:I
+Cache[NODE_2].State:I
+Chan1[NODE_1].Cmd:ReqS
+Chan1[NODE_2].Cmd:Empty
+Chan2[NODE_1].Cmd:Empty
+Chan2[NODE_2].Cmd:Empty
+Chan3[NODE_1].Cmd:Empty
+Chan3[NODE_2].Cmd:Empty
+ShrSet[NODE_1]:false
+ShrSet[NODE_2]:false
+InvSet[NODE_1]:false
+InvSet[NODE_2]:false
+ExGntd:false
+CurCmd:ReqE
+CurPtr:NODE_1
+
+State 13:
+Cache[NODE_1].State:I
+Cache[NODE_2].State:I
+Chan1[NODE_1].Cmd:Empty
+Chan1[NODE_2].Cmd:ReqS
+Chan2[NODE_1].Cmd:Empty
+Chan2[NODE_2].Cmd:Empty
+Chan3[NODE_1].Cmd:Empty
+Chan3[NODE_2].Cmd:Empty
+ShrSet[NODE_1]:false
+ShrSet[NODE_2]:false
+InvSet[NODE_1]:false
+InvSet[NODE_2]:false
+ExGntd:false
+CurCmd:ReqE
+CurPtr:NODE_1
+
+State 14:
+Cache[NODE_1].State:I
+Cache[NODE_2].State:I
+Chan1[NODE_1].Cmd:Empty
+Chan1[NODE_2].Cmd:ReqE
+Chan2[NODE_1].Cmd:Empty
+Chan2[NODE_2].Cmd:Empty
+Chan3[NODE_1].Cmd:Empty
+Chan3[NODE_2].Cmd:Empty
+ShrSet[NODE_1]:false
+ShrSet[NODE_2]:false
+InvSet[NODE_1]:false
+InvSet[NODE_2]:false
+ExGntd:false
+CurCmd:ReqS
+CurPtr:NODE_1
+
+State 15:
+Cache[NODE_1].State:I
+Cache[NODE_2].State:I
+Chan1[NODE_1].Cmd:Empty
+Chan1[NODE_2].Cmd:Empty
+Chan2[NODE_1].Cmd:GntS
+Chan2[NODE_2].Cmd:Empty
+Chan3[NODE_1].Cmd:Empty
+Chan3[NODE_2].Cmd:Empty
+ShrSet[NODE_1]:true
+ShrSet[NODE_2]:false
+InvSet[NODE_1]:false
+InvSet[NODE_2]:false
+ExGntd:false
+CurCmd:Empty
+CurPtr:NODE_1
+
+State 16:
+Cache[NODE_1].State:I
+Cache[NODE_2].State:I
+Chan1[NODE_1].Cmd:ReqE
+Chan1[NODE_2].Cmd:Empty
+Chan2[NODE_1].Cmd:Empty
+Chan2[NODE_2].Cmd:Empty
+Chan3[NODE_1].Cmd:Empty
+Chan3[NODE_2].Cmd:Empty
+ShrSet[NODE_1]:false
+ShrSet[NODE_2]:false
+InvSet[NODE_1]:false
+InvSet[NODE_2]:false
+ExGntd:false
+CurCmd:ReqS
+CurPtr:NODE_1
+
+State 17:
+Cache[NODE_1].State:I
+Cache[NODE_2].State:I
+Chan1[NODE_1].Cmd:ReqS
+Chan1[NODE_2].Cmd:Empty
+Chan2[NODE_1].Cmd:Empty
+Chan2[NODE_2].Cmd:Empty
+Chan3[NODE_1].Cmd:Empty
+Chan3[NODE_2].Cmd:Empty
+ShrSet[NODE_1]:false
+ShrSet[NODE_2]:false
+InvSet[NODE_1]:false
+InvSet[NODE_2]:false
+ExGntd:false
+CurCmd:ReqS
+CurPtr:NODE_1
+
+State 18:
+Cache[NODE_1].State:I
+Cache[NODE_2].State:I
+Chan1[NODE_1].Cmd:Empty
+Chan1[NODE_2].Cmd:ReqS
+Chan2[NODE_1].Cmd:Empty
+Chan2[NODE_2].Cmd:Empty
+Chan3[NODE_1].Cmd:Empty
+Chan3[NODE_2].Cmd:Empty
+ShrSet[NODE_1]:false
+ShrSet[NODE_2]:false
+InvSet[NODE_1]:false
+InvSet[NODE_2]:false
+ExGntd:false
+CurCmd:ReqS
+CurPtr:NODE_1
+
+
+The following is the error trace for the error:
+
+	Invariant "CntrlProp, j:NODE_1, i:NODE_1" failed.
+
+Startstate Init, d:DATA_1 fired.
+Cache[NODE_1].State:I
+Cache[NODE_2].State:I
+Chan1[NODE_1].Cmd:Empty
+Chan1[NODE_2].Cmd:Empty
+Chan2[NODE_1].Cmd:Empty
+Chan2[NODE_2].Cmd:Empty
+Chan3[NODE_1].Cmd:Empty
+Chan3[NODE_2].Cmd:Empty
+ShrSet[NODE_1]:false
+ShrSet[NODE_2]:false
+InvSet[NODE_1]:false
+InvSet[NODE_2]:false
+ExGntd:false
+CurCmd:Empty
+CurPtr:Undefined
+----------
+
+Rule SendReqEI, i:NODE_1 fired.
+Chan1[NODE_1].Cmd:ReqE
+----------
+
+Rule RecvReq, i:NODE_1 fired.
+Chan1[NODE_1].Cmd:Empty
+CurCmd:ReqE
+CurPtr:NODE_1
+----------
+
+Rule SendGntE, i:NODE_1 fired.
+Chan2[NODE_1].Cmd:GntE
+ShrSet[NODE_1]:true
+ExGntd:true
+CurCmd:Empty
+----------
+
+Rule RecvGntE, i:NODE_1 fired.
+The last state of the trace (in full) is:
+Cache[NODE_1].State:E
+Cache[NODE_2].State:I
+Chan1[NODE_1].Cmd:Empty
+Chan1[NODE_2].Cmd:Empty
+Chan2[NODE_1].Cmd:Empty
+Chan2[NODE_2].Cmd:Empty
+Chan3[NODE_1].Cmd:Empty
+Chan3[NODE_2].Cmd:Empty
+ShrSet[NODE_1]:true
+ShrSet[NODE_2]:false
+InvSet[NODE_1]:false
+InvSet[NODE_2]:false
+ExGntd:true
+CurCmd:Empty
+CurPtr:NODE_1
+----------
+
+End of the error trace.
+
+==========================================================================
+
+Result:
+
+	Invariant "CntrlProp, j:NODE_1, i:NODE_1" failed.
+
+State Space Explored:
+
+	19 states, 27 rules fired in 1.83s.
+
+Analysis of State Space:
+
+	There are rules that are never fired.
+	If you are running with symmetry, this may be why.  Otherwise,
+	please run this program with "-pr" for the rules information.

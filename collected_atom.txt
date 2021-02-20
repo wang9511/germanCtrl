@@ -1,0 +1,24 @@
+(Cache[NODE].State = S)
+Chan2[NODE].Cmd = GntS
+Cache[NODE].State = I
+CurCmd = Empty
+(ExGntd = false)
+CurCmd = ReqS
+ExGntd)
+(ExGntd = true)
+CurCmd != Empty
+(CurCmd = ReqE)
+Chan3[NODE].Cmd = InvAck
+Chan2[NODE].Cmd = Inv
+Chan1[NODE].Cmd != Empty
+Chan3[NODE].Cmd = Empty
+CurPtr = NODE
+Chan1[NODE].Cmd = Empty
+Chan2[NODE].Cmd = Empty
+(Cache[NODE].State = I)
+!ExGntd
+InvSet[NODE]
+ShrSet[NODE] = false
+Chan2[NODE].Cmd = GntE
+CurCmd = ReqE
+(CurCmd = ReqS
